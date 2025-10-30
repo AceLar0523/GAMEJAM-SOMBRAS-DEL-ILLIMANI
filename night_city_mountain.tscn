@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqs3cfrf43fyb"]
+
+[ext_resource type="Texture2D" uid="uid://iay0gkhqcidt" path="res://arboles/NightCity_PNG/NightCity_Mountain.png" id="1_j5yxa"]
+[ext_resource type="Texture2D" uid="uid://bcn2x5pbi2ei5" path="res://arboles/Large Tent.png" id="2_0yxs7"]
+[ext_resource type="Texture2D" uid="uid://buasl0pd71g3a" path="res://arboles/Tree3.png" id="3_57rgu"]
+[ext_resource type="Texture2D" uid="uid://q62jk0ohuuqy" path="res://arboles/Weeping Willow1.png" id="4_s2f4k"]
+[ext_resource type="Texture2D" uid="uid://j5cibnu0qbng" path="res://arboles/Tree2.png" id="5_6eqk8"]
+
+[node name="NightCityMountain" type="Sprite2D"]
+position = Vector2(254.99998, 186)
+scale = Vector2(2.0498047, 1.0362955)
+texture = ExtResource("1_j5yxa")
+
+[node name="LargeTent" type="Sprite2D" parent="."]
+position = Vector2(-883.9867, 414.93954)
+scale = Vector2(2.9880898, 3.5633342)
+texture = ExtResource("2_0yxs7")
+
+[node name="Tree3" type="Sprite2D" parent="."]
+position = Vector2(908.3792, 440.02893)
+scale = Vector2(1, 2.3000505)
+texture = ExtResource("3_57rgu")
+
+[node name="WeepingWillow1" type="Sprite2D" parent="."]
+position = Vector2(720.0686, 417.8345)
+scale = Vector2(1, 2.5003135)
+texture = ExtResource("4_s2f4k")
+
+[node name="Tree2" type="Sprite2D" parent="."]
+position = Vector2(809.83325, 439.43774)
+scale = Vector2(1, 2.3418047)
+texture = ExtResource("5_6eqk8")

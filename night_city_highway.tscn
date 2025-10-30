@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8u47b4bqg0mn"]
+
+[ext_resource type="Texture2D" uid="uid://modj74ghqowa" path="res://arboles/NightCity_PNG/NightCity_highway.png" id="1_2ogfo"]
+
+[node name="NightCityHighway" type="Sprite2D"]
+position = Vector2(302.50003, 171.99986)
+scale = Vector2(2.7348633, 1.3619791)
+texture = ExtResource("1_2ogfo")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cokh5nrtbjo37"]
+
+[ext_resource type="Texture2D" uid="uid://qwbsyx16ay0k" path="res://arboles/NightCity_PNG/NightCity_club.png" id="1_2y1qm"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="NightCityClub" type="Sprite2D" parent="."]
+position = Vector2(367, 122.50002)
+scale = Vector2(2.493164, 1.2714843)
+texture = ExtResource("1_2y1qm")
