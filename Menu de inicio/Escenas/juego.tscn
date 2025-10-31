@@ -1,3 +1,51 @@
-[gd_scene format=3 uid="uid://7jfmuo7fomhl"]
+[gd_scene load_steps=8 format=3 uid="uid://7jfmuo7fomhl"]
 
-[node name="Juego" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://modj74ghqowa" path="res://arboles/NightCity_PNG/NightCity_highway.png" id="1_r1vew"]
+[ext_resource type="PackedScene" path="res://viuda.tscn" id="2_7odhj"]
+[ext_resource type="PackedScene" uid="uid://cklkpsdd5romu" path="res://player.tscn" id="3_g7ktg"]
+[ext_resource type="AudioStream" uid="uid://cad5cjex538uq" path="res://Menu de inicio/Musica/musica terror.mp3" id="4_3rmpg"]
+[ext_resource type="Texture2D" uid="uid://b5vws3qi7j41v" path="res://arboles/Tree4.png" id="5_nugnb"]
+[ext_resource type="Texture2D" uid="uid://cn6vi2bmy65qy" path="res://arboles/Snow blizzard sheet frame size 484x274.png" id="6_y2fb5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibjaa"]
+size = Vector2(2194.892, 30.233643)
+
+[node name="NightCityHighway" type="Sprite2D"]
+position = Vector2(577.62506, 324.49997)
+scale = Vector2(0.5599365, 0.41731766)
+texture = ExtResource("1_r1vew")
+
+[node name="viudav1" parent="." instance=ExtResource("2_7odhj")]
+position = Vector2(-934.8396, 561.09033)
+scale = Vector2(4.8, 4.8)
+
+[node name="Player" parent="." instance=ExtResource("3_g7ktg")]
+position = Vector2(932.918, 530.7708)
+scale = Vector2(2.8, 2.8)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-28.797974, 704.958)
+scale = Vector2(0.99999976, 0.9999999)
+shape = SubResource("RectangleShape2D_ibjaa")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_3rmpg")
+volume_db = -8.465
+autoplay = true
+
+[node name="Tree4" type="Sprite2D" parent="."]
+position = Vector2(-699.40985, 370.22168)
+scale = Vector2(1.0371699, 2.3317537)
+texture = ExtResource("5_nugnb")
+
+[node name="Tree5" type="Sprite2D" parent="."]
+position = Vector2(477.5094, 327.08902)
+scale = Vector2(1.1627426, 2.615145)
+texture = ExtResource("5_nugnb")
+
+[node name="SnowBlizzardSheetFrameSize484x274" type="Sprite2D" parent="."]
+position = Vector2(3.348484, 9.727478e-05)
+scale = Vector2(0.8479414, 0.9401371)
+texture = ExtResource("6_y2fb5")
