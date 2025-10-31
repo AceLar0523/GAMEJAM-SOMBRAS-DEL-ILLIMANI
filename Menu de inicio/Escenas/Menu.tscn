@@ -1,0 +1,130 @@
+[gd_scene load_steps=11 format=3 uid="uid://i6hapjvah7ng"]
+
+[ext_resource type="Script" uid="uid://rbu3pdc5g21d" path="res://Menu de inicio/Scripts/menu.gd" id="1_mclaw"]
+[ext_resource type="AudioStream" uid="uid://b03oxe11kcsdb" path="res://Menu de inicio/Musica/AudioMenu.mp3" id="2_cgbnr"]
+[ext_resource type="Texture2D" uid="uid://ctcku14w7gcqw" path="res://Menu de inicio/Imagenes/Fondo 1.jpg" id="3_61ofy"]
+[ext_resource type="Texture2D" uid="uid://bxc0dl1t2fpia" path="res://Menu de inicio/Imagenes/Fondo 2.png" id="4_vrh7o"]
+[ext_resource type="Texture2D" uid="uid://b0c1ldkasque1" path="res://Menu de inicio/Imagenes/Fondo 3.png" id="5_10wni"]
+[ext_resource type="Texture2D" uid="uid://dc041mpcypub3" path="res://Menu de inicio/Imagenes/Fondo 4.png" id="6_dj7a8"]
+[ext_resource type="Texture2D" uid="uid://dfkgjlq6xqs7f" path="res://Menu de inicio/Imagenes/Fondo 5.png" id="7_5km06"]
+[ext_resource type="Texture2D" uid="uid://d2fur60wmt7pc" path="res://Menu de inicio/Imagenes/Fondo 6.png" id="8_5db1q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57mlq"]
+bg_color = Color(0, 0, 0, 0.57254905)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pw27j"]
+bg_color = Color(0, 0, 0, 0.4862745)
+corner_detail = 1
+
+[node name="Pantalla" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mclaw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.23392546, 0.23392546, 0.2339254, 1)
+
+[node name="AudioMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_cgbnr")
+volume_db = 7.222
+autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_61ofy")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -123.0
+offset_top = -136.5
+offset_right = 123.0
+offset_bottom = 136.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 21
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_57mlq")
+text = "Jugar"
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_pw27j")
+text = "Opciones "
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Salir"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
+
+[node name="nubes parallax" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
+position = Vector2(-139, 583)
+motion_scale = Vector2(0.5, 0.5)
+motion_offset = Vector2(0.1, 0)
+
+[node name="TextureRect2" type="TextureRect" parent="ParallaxBackground/nubes parallax"]
+offset_left = -1789.0
+offset_top = 230.0
+offset_right = -381.0
+offset_bottom = 966.0
+texture = ExtResource("4_vrh7o")
+
+[node name="TextureRect3" type="TextureRect" parent="ParallaxBackground/nubes parallax"]
+offset_left = 980.0
+offset_top = 211.0
+offset_right = 2388.0
+offset_bottom = 947.0
+texture = ExtResource("5_10wni")
+
+[node name="TextureRect4" type="TextureRect" parent="ParallaxBackground/nubes parallax"]
+offset_left = 2323.0
+offset_top = 211.0
+offset_right = 3731.0
+offset_bottom = 947.0
+texture = ExtResource("6_dj7a8")
+
+[node name="TextureRect5" type="TextureRect" parent="ParallaxBackground/nubes parallax"]
+offset_left = -425.0
+offset_top = 222.0
+offset_right = 983.0
+offset_bottom = 958.0
+texture = ExtResource("7_5km06")
+
+[node name="TextureRect6" type="TextureRect" parent="ParallaxBackground/nubes parallax"]
+offset_left = 3680.0
+offset_top = 218.0
+offset_right = 5088.0
+offset_bottom = 954.0
+texture = ExtResource("8_5db1q")
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
