@@ -36,12 +36,12 @@ volume_db = -8.465
 autoplay = true
 
 [node name="Tree4" type="Sprite2D" parent="."]
-position = Vector2(-674.4069, 346.25912)
+position = Vector2(-699.40985, 370.22168)
 scale = Vector2(1.0371699, 2.3317537)
 texture = ExtResource("5_na4y3")
 
 [node name="Tree5" type="Sprite2D" parent="."]
-position = Vector2(498.34045, 306.72086)
+position = Vector2(477.5094, 327.08902)
 scale = Vector2(1.1627426, 2.615145)
 texture = ExtResource("5_na4y3")
 
