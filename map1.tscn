@@ -1,28 +1,51 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxlqnxadyahip"]
+[gd_scene load_steps=8 format=3 uid="uid://snijbbyyuexn"]
 
 [ext_resource type="Texture2D" uid="uid://modj74ghqowa" path="res://arboles/NightCity_PNG/NightCity_highway.png" id="1_p84jh"]
+[ext_resource type="PackedScene" path="res://viuda.tscn" id="2_cf5bg"]
 [ext_resource type="PackedScene" uid="uid://cklkpsdd5romu" path="res://player.tscn" id="2_ibjaa"]
+[ext_resource type="AudioStream" uid="uid://cad5cjex538uq" path="res://Menu de inicio/Musica/musica terror.mp3" id="4_flm4b"]
+[ext_resource type="Texture2D" uid="uid://b5vws3qi7j41v" path="res://arboles/Tree4.png" id="5_na4y3"]
+[ext_resource type="Texture2D" uid="uid://cn6vi2bmy65qy" path="res://arboles/Snow blizzard sheet frame size 484x274.png" id="6_gtvy4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibjaa"]
-size = Vector2(2066.3706, 61.118958)
+size = Vector2(2194.892, 30.233643)
 
 [node name="NightCityHighway" type="Sprite2D"]
-position = Vector2(575.625, 324.5)
-scale = Vector2(0.55798334, 0.41080725)
+position = Vector2(577.62506, 324.49997)
+scale = Vector2(0.5599365, 0.41731766)
 texture = ExtResource("1_p84jh")
+
+[node name="viudav1" parent="." instance=ExtResource("2_cf5bg")]
+position = Vector2(-934.8396, 561.09033)
+scale = Vector2(4.8, 4.8)
+
+[node name="Player" parent="." instance=ExtResource("2_ibjaa")]
+position = Vector2(932.918, 530.7708)
+scale = Vector2(2.8, 2.8)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-2.0159912, 755.8289)
-scale = Vector2(0.99999934, 0.9999998)
+position = Vector2(-28.797974, 704.958)
+scale = Vector2(0.99999976, 0.9999999)
 shape = SubResource("RectangleShape2D_ibjaa")
 
-[node name="Player" parent="." instance=ExtResource("2_ibjaa")]
-position = Vector2(491, 529)
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_flm4b")
+volume_db = -8.465
+autoplay = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
-anchor_mode = 0
-zoom = Vector2(2, 2)
-position_smoothing_enabled = true
-rotation_smoothing_enabled = true
+[node name="Tree4" type="Sprite2D" parent="."]
+position = Vector2(-699.40985, 370.22168)
+scale = Vector2(1.0371699, 2.3317537)
+texture = ExtResource("5_na4y3")
+
+[node name="Tree5" type="Sprite2D" parent="."]
+position = Vector2(477.5094, 327.08902)
+scale = Vector2(1.1627426, 2.615145)
+texture = ExtResource("5_na4y3")
+
+[node name="SnowBlizzardSheetFrameSize484x274" type="Sprite2D" parent="."]
+position = Vector2(3.348484, 9.727478e-05)
+scale = Vector2(0.8479414, 0.9401371)
+texture = ExtResource("6_gtvy4")
