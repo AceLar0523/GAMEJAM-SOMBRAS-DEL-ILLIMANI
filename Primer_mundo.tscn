@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://4w6v53tat54"]
+[gd_scene load_steps=9 format=3 uid="uid://4w6v53tat54"]
 
 [ext_resource type="Texture2D" uid="uid://qwbsyx16ay0k" path="res://arboles/NightCity_PNG/NightCity_club.png" id="1_qf7yu"]
 [ext_resource type="Script" uid="uid://dnfsy74suht3m" path="res://area_2d_primer_mundo.gd" id="2_m7mxo"]
 [ext_resource type="PackedScene" uid="uid://cklkpsdd5romu" path="res://player.tscn" id="2_ov74l"]
 [ext_resource type="AudioStream" uid="uid://b03oxe11kcsdb" path="res://Menu de inicio/Musica/AudioMenu.mp3" id="4_m7mxo"]
+[ext_resource type="Texture2D" uid="uid://cn6vi2bmy65qy" path="res://arboles/Snow blizzard sheet frame size 484x274.png" id="5_8l6lr"]
+[ext_resource type="Texture2D" uid="uid://b5vws3qi7j41v" path="res://arboles/Tree4.png" id="6_6xssk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_omwcv"]
 size = Vector2(35, 171.5)
@@ -28,11 +30,12 @@ script = ExtResource("2_m7mxo")
 next_scene_path = "res://map1.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-855, 78)
+position = Vector2(-864, 87)
 shape = SubResource("RectangleShape2D_omwcv")
 
 [node name="Player" parent="." instance=ExtResource("2_ov74l")]
-position = Vector2(838, 515)
+position = Vector2(840, 495.00003)
+scale = Vector2(1.3, 1.3)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
@@ -44,5 +47,15 @@ shape = SubResource("RectangleShape2D_f3sb7")
 stream = ExtResource("4_m7mxo")
 volume_db = 9.674
 autoplay = true
+
+[node name="Tree2" type="Sprite2D" parent="."]
+position = Vector2(582.50006, 324)
+scale = Vector2(0.47727278, 0.39902678)
+texture = ExtResource("5_8l6lr")
+
+[node name="Tree4" type="Sprite2D" parent="."]
+position = Vector2(1076.7501, 456.75)
+scale = Vector2(0.552735, 1.2572116)
+texture = ExtResource("6_6xssk")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
