@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://4w6v53tat54"]
+[gd_scene load_steps=6 format=3 uid="uid://34p5c6r6q27u"]
 
 [ext_resource type="Texture2D" uid="uid://qwbsyx16ay0k" path="res://arboles/NightCity_PNG/NightCity_club.png" id="1_qf7yu"]
-[ext_resource type="Script" uid="uid://dnfsy74suht3m" path="res://area_2d_primer_mundo.gd" id="2_m7mxo"]
+[ext_resource type="Script" path="res://area_2d_primer_mundo.gd" id="2_m7mxo"]
 [ext_resource type="PackedScene" uid="uid://cklkpsdd5romu" path="res://player.tscn" id="2_ov74l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_omwcv"]
@@ -31,7 +31,7 @@ position = Vector2(-855, 78)
 shape = SubResource("RectangleShape2D_omwcv")
 
 [node name="Player" parent="." instance=ExtResource("2_ov74l")]
-position = Vector2(838, 515)
+position = Vector2(491, 529)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
