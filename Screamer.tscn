@@ -1,7 +1,59 @@
-[gd_scene format=3 uid="uid://dn3qe8poo67qc"]
+[gd_scene load_steps=6 format=3 uid="uid://dn3qe8poo67qc"]
+
+[ext_resource type="Texture2D" uid="uid://dppabw0f37nce" path="res://Assets Screamers/Viuda/sc1.png" id="1_g6o84"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0o7w3"]
+size = Vector2(431, 243)
+
+[sub_resource type="Animation" id="Animation_0tl6a"]
+resource_name = "susto1"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_6f02q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gpets"]
+_data = {
+&"RESET": SubResource("Animation_6f02q"),
+&"susto1": SubResource("Animation_0tl6a")
+}
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(214, 119)
+scale = Vector2(0.41796875, 0.23828125)
+texture = ExtResource("1_g6o84")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CollisionShape2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(214, 117)
+shape = SubResource("RectangleShape2D_0o7w3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_gpets")
+}
