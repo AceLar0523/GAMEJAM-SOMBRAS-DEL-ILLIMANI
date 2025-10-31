@@ -1,8 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://snijbbyyuexn"]
+[gd_scene load_steps=4 format=3 uid="uid://snijbbyyuexn"]
 
-[ext_resource type="Texture2D" uid="uid://modj74ghqowa" path="res://arboles/NightCity_PNG/NightCity_highway.png" id="1_2ogfo"]
+[ext_resource type="Texture2D" uid="uid://modj74ghqowa" path="res://arboles/NightCity_PNG/NightCity_highway.png" id="1_p84jh"]
+[ext_resource type="PackedScene" uid="uid://cklkpsdd5romu" path="res://player.tscn" id="2_ibjaa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibjaa"]
+size = Vector2(2066.3706, 61.118958)
 
 [node name="NightCityHighway" type="Sprite2D"]
-position = Vector2(1336, 31)
-scale = Vector2(2.7348633, 1.3619791)
-texture = ExtResource("1_2ogfo")
+position = Vector2(575.625, 324.5)
+scale = Vector2(0.55798334, 0.41080725)
+texture = ExtResource("1_p84jh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-2.0159912, 755.8289)
+scale = Vector2(0.99999934, 0.9999998)
+shape = SubResource("RectangleShape2D_ibjaa")
+
+[node name="Player" parent="." instance=ExtResource("2_ibjaa")]
+position = Vector2(968.4428, 600.0381)

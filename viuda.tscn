@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=3 uid="uid://ct6betdhyrvx1"]
+
+[ext_resource type="Texture2D" uid="uid://ckk88s5js7240" path="res://Assets viuda/viudaframe.png" id="1_il0hw"]
+[ext_resource type="Script" uid="uid://tfjdlhyv1xmd" path="res://viuda.gd" id="1_whcr3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whcr3"]
+size = Vector2(44, 57)
+
+[sub_resource type="Animation" id="Animation_hf6tr"]
+resource_name = "idle"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.46666667, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_nsks5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_68h1t"]
+resource_name = "walk"
+length = 1.2
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.53333336, 0.7, 1.0666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 2, 2, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7gshu"]
+_data = {
+&"RESET": SubResource("Animation_nsks5"),
+&"idle": SubResource("Animation_hf6tr"),
+&"walk": SubResource("Animation_68h1t")
+}
+
+[node name="viudav1" type="CharacterBody2D"]
+position = Vector2(0, 10)
+script = ExtResource("1_whcr3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(17.156252, 4.3124986)
+scale = Vector2(0.45358455, 0.33735794)
+texture = ExtResource("1_il0hw")
+hframes = 3
+vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(17, 3.5)
+shape = SubResource("RectangleShape2D_whcr3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_7gshu")
+}
