@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuijta8obpiom"]
+
+[ext_resource type="PackedScene" uid="uid://ct6betdhyrvx1" path="res://viuda.tscn" id="1_lexvv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lexvv"]
+size = Vector2(646.25, 23)
+
+[node name="worldpruebas personajes" type="Node"]
+
+[node name="viudav1" parent="." instance=ExtResource("1_lexvv")]
+position = Vector2(14, 185)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-38, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(297.875, 233.5)
+shape = SubResource("RectangleShape2D_lexvv")
