@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://c72fkp7va8xdr"]
+
+[ext_resource type="Texture2D" uid="uid://dwuc4j8g46vth" path="res://arboles/Tree1.png" id="1_kdubu"]
+[ext_resource type="Texture2D" uid="uid://dhx70q67rmdo" path="res://arboles/cloud1.png" id="2_d21ai"]
+[ext_resource type="Texture2D" uid="uid://b8vb7vmxitnsj" path="res://arboles/BG Dirt1.png" id="3_rj586"]
+[ext_resource type="Texture2D" uid="uid://dw2ac63ego48u" path="res://arboles/Birch1.png" id="4_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://b3c6vtbgt8ryo" path="res://arboles/birds1.png" id="5_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://bcn2x5pbi2ei5" path="res://arboles/Large Tent.png" id="6_hqns4"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(26752, 2432)
+metadata/_edit_vertical_guides_ = [-604.0]
+
+[node name="Tree1" type="Sprite2D" parent="."]
+position = Vector2(83847.984, -19217)
+scale = Vector2(114.000015, 141.92307)
+texture = ExtResource("1_kdubu")
+
+[node name="AnimationTree" type="AnimationTree" parent="Tree1"]
+
+[node name="Cloud1" type="Sprite2D" parent="."]
+position = Vector2(19854.996, -14926)
+texture = ExtResource("2_d21ai")
+
+[node name="BgDirt1" type="Sprite2D" parent="."]
+position = Vector2(25423, -6990)
+scale = Vector2(92.333336, 57)
+texture = ExtResource("3_rj586")
+
+[node name="Birch1" type="Sprite2D" parent="."]
+position = Vector2(72207, -16526)
+scale = Vector2(308.2, 249.00002)
+texture = ExtResource("4_4d7sh")
+
+[node name="Birds1" type="Sprite2D" parent="."]
+position = Vector2(15759.001, -36686)
+scale = Vector2(589.7999, 333.79993)
+texture = ExtResource("5_ir8iy")
+
+[node name="Cloud2" type="Sprite2D" parent="."]
+position = Vector2(-9166, -42448)
+scale = Vector2(-1239.0801, 1229.7999)
+texture = ExtResource("2_d21ai")
+
+[node name="LargeTent" type="Sprite2D" parent="."]
+position = Vector2(-13199.002, -17248)
+scale = Vector2(564, 230.99998)
+texture = ExtResource("6_hqns4")
