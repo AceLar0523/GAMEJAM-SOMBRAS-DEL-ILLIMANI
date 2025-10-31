@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0c1ldkasque1"
-path="res://.godot/imported/Fondo 3.png-3f4369b77a28d26bbbad6a509ae8cba9.ctex"
+path="res://.godot/imported/Fondo 3.png-dea288c5a89472c967a78205eb01e2e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/Fondo 3.png"
-dest_files=["res://.godot/imported/Fondo 3.png-3f4369b77a28d26bbbad6a509ae8cba9.ctex"]
+source_file="res://Menu de inicio/Imagenes/Fondo 3.png"
+dest_files=["res://.godot/imported/Fondo 3.png-dea288c5a89472c967a78205eb01e2e9.ctex"]
 
 [params]
 
